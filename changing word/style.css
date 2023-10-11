@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    text-decoration: none;
+    padding: 0;
+    background-color: black;
+}
+.container{
+    width: 346px;
+    overflow: hidden;
+
+}
+.container .text{
+    position: relative;
+    color: plum;
+    font-size: 30px;
+    font-weight: 600;
+}
+.container .text.first-text{
+    color: white;
+}
+.text.sec-text:before{
+    content: "";
+    top: 0;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    border-left: 2px solid white;
+    animation: animate 4s steps(12) infinite;
+}
+@keyframes animate{
+
+      40%,
+      60% {
+        left: calc(100% + 4px);
+      }
+      100%{
+        left: 0%;;
+      }
+}
